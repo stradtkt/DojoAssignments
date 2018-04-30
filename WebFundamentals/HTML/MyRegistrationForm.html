@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>My Registration Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <style>
     h1 {
       text-align: center;
@@ -12,26 +13,51 @@
     form {
       width: 300px;
       position: relative;
-      left: 50%;
+      left: 41.5%;
     }
     label {
       float: left;
     }
     div {
       clear: both;
+      padding: 10px;
     }
     input {
       float: right;
     }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="date"] {
-      display: inline-block;
-      float: right;
+    input[type="email"] {
+      position: relative;
+      left: 28%;
+    }
+    input[type="text"] {
+      position: relative;
+      left: 10%;
+    }
+    #password {
+      position: relative; 
+      left: 14%;
+    }
+    #pw_confirm {
+      position: relative;
+      left: 4.5%;
+    }
+    #date {
+      position: relative; 
+      left: 8%;
     }
     input[type="radio"] {
       text-align: center;
+    }
+    .fa.fa-calendar {
+      position: relative;
+      left: 83%;
+    }
+    select {
+      position: relative;
+      left: 10%;
+    }
+    #submit {
+      float: left;
     }
   </style>
 </head>
@@ -78,6 +104,7 @@
       <label>
         Birthday
       <input type="date" id="date">
+      <i class="fa fa-calendar"></i>
     </label>
     </div>
     <br>
@@ -92,7 +119,21 @@
           <input type="radio" name="other" id="other">Other
       </label>
     </div>
-
+    <div>
+      <p><b>A short description about yourself</b></p>
+      <textarea name="desc" id="desc" cols="33" rows="5"></textarea>
+    </div>
+    <div>
+      <label for="favorite_language">Favorite Language</label>
+      <select name="favorite_language" id="favorite_language">
+        <option value="CSS">CSS</option>
+        <option value="HTML">HTML</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="jQuery">jQuery</option>
+        <option value="Python">Python</option>
+      </select>
+    </div>
+    <input type="submit" value="Submit" id="submit">
   </form>
 </body>
 </html>
