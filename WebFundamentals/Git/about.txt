@@ -1,0 +1,23 @@
+git branch new_feature master
+git branch [new-branch] [old-branch]
+git checkout new_feature = in order to make our new branch the current brach you would run this
+git checkout -b <new_branch_name> = to create a new branch and set it as the current branch you would run this
+git checkout -b new_feature
+git brach = to see all of the branches that exist
+git checkout master = this will switch back to the master branch
+git checkout -b master = this is another way to get back to the master branch
+git merge new_feature = merges this branch into your current branch
+git merge --squash <branch_to_merge> = takes all of your commits and makes them into one --squash
+
+git diff = checking to see what your conflicts are
+git config --global merge.tool opendiff
+
+git clone <URL of repository>
+git fetch origin master = when fetching from your GitHub repository
+git fetch upstream master = when fetching from the original GitHub repository
+
+git pull origin master -m "this is a fetch and a merge in one command"
+
+git checkout develop
+git merge YOURBRANCH
+git push origin develop
