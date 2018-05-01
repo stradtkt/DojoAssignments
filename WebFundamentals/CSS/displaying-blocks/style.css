@@ -1,0 +1,37 @@
+img {
+  width: 200px;
+  height: 200px;
+}
+.row-1, .row-2, .row-3, .row-4 {
+  display: block;
+}
+.header {
+  display: inline;
+  margin: 0 auto;
+}
+.header img {
+  display: inline;
+  width: 150px; 
+  height: 150px;
+}
+
+.header-img-1 {
+  position: relative;
+  left: 100px;
+}
+.header-img-2 {
+  position: relative;
+  left: 500px;
+}
+.header h1 {
+  position: relative;
+  left: 300px;
+  top: 130px;
+}
+.row-1 img {
+  background: red;
+}
+.row-3 img {
+  background: red;
+  border: 1px solid black;
+}
