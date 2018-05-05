@@ -1,0 +1,58 @@
+body {
+  width: 900px;
+}
+header {
+  display: inline;
+}
+header img {
+  width: 100px;
+  height: 100px;
+}
+header h1 {
+  display: inline;
+}
+header h1 span {
+  color: #3D76A6;
+}
+header h3 {
+  background-color: #3D76A6;
+  height: 40px;
+  color: white;
+  font-family: Arial;
+  font-weight: 400;
+  margin: 10px 20px;
+  padding: 5px 0 0 5px;
+  font-size: 30px;
+}
+.ad-background {
+  width: 100%;
+  height: 230px;
+}
+.side-nav {
+  display: inline-block;
+  width: 200px;
+}
+.side-nav p {
+  font-size: 14px;
+}
+.side-nav h3 {
+  position: absolute;
+}
+.ninja {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  bottom: 100px;
+  left: 70px;
+}
+.learn-btn {
+  position: relative;
+  bottom: 80px;
+}
+.side-nav p:nth-of-type(1) span {
+  color: red;
+}
+.side-nav p span {
+  color: #3D76A6;
+  font-weight: 700;
+}

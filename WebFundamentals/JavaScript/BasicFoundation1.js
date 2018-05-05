@@ -110,18 +110,28 @@ function negatives(arr) {
 
 
 function maxMinAvg(arr) {
+  var min = Math.min.apply(null, arr);
+  var max = Math.max.apply(null, arr);
   var sum = 0;
-  var max = 0;
-  var min = 0;
   for(var i = 0; i < arr.length; i++) {
-    max = Math.max(arr[i]);
-    min = Math.max(arr[i]);
     sum += arr[i];
   }
   var avg = sum / arr.length;
-  console.log(max,min,avg);
+  console.log(max, min, avg);
   return max, min, avg;
 }
-maxMinAvg([1,2,3,4,5,6,7,8]);
+// maxMinAvg([1,2,3,4,5,6,7,8]); //output 8, 1, 4.5
+
+
+function swapValues(arr) {
+  var arr2 = [];
+
+  for(var i = arr.length - 1; i >= 0; i--) {
+    arr2.push(arr[i]);
+  }
+  console.log(arr2);
+  return arr2;
+}
+// swapValues([10,8,6,-2]);
 
 
