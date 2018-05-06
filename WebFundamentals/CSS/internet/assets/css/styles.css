@@ -119,3 +119,44 @@
   color: #14c1de;
   font-size: 36px;
 }
+.contact-info p {
+  font-size: 10px;
+  color: #6d6d6d;
+}
+.main-info {
+  padding-top: 10px;
+}
+.main-info h3 {
+  color: #28659d;
+}
+.main-info h4 {
+  font-weight: 500;
+}
+.main-info h4 span {
+  font-weight: 900;
+}
+.main-info ul {
+  margin-left: 50px;
+}
+.main-info img {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+.main-info ol {
+  margin-left: 50px;
+}
+.footer {
+  margin-top: 20px;
+  border-top: 3px #0084df solid;
+  border-right: 5px #0084df solid;
+  border-left: 5px #0084df solid;
+}
+.footer img {
+  width: 100px;
+  display: inline-block;
+}
+.footer div {
+  display: inline-block;
+  width: 580px;
+}

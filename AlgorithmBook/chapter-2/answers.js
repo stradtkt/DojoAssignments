@@ -1,5 +1,6 @@
 /**
- Implement function sigma(num) that given a number, returns the sum of all positive integers up to number (inclusive). Ex.: sigma(3) = 6 (or 1 + 2 + 3); sigma(5) = 15 (or 1 + 2 + 3 + 4 + 5). 
+ Implement function sigma(num) that given a number, returns the sum of all positive integers up to number (inclusive). 
+ Ex.: sigma(3) = 6 (or 1 + 2 + 3); sigma(5) = 15 (or 1 + 2 + 3 + 4 + 5). 
  */
 
  function sigma(num) {
@@ -12,7 +13,9 @@
 //  console.log(sigma(5)); // output = 15
 
 /**
- Just the Facts, ma’am. Factorials, that is. Write a function factorial(num) that, given a number, returns the product (multiplication) of all positive integers from 1 up to number (inclusive). For example, factorial(3) = 6 (or 1 * 2 * 3); factorial(5) = 120 (or 1 * 2 * 3 * 4 * 5). 
+ Just the Facts, ma’am. Factorials, that is. Write a function factorial(num) that, given a number, 
+ returns the product (multiplication) of all positive integers from 1 up to number (inclusive). 
+ For example, factorial(3) = 6 (or 1 * 2 * 3); factorial(5) = 120 (or 1 * 2 * 3 * 4 * 5). 
  */
 
 function factorial(num) {
@@ -26,7 +29,8 @@ function factorial(num) {
 
 
 /*
-Create threesFives() that adds values from 100 and 4000000 (inclusive) if that value is evenly divisible by 3 or 5 but not both. Display the final sum in the console. 
+Create threesFives() that adds values from 100 and 4000000 (inclusive) if that value is evenly 
+divisible by 3 or 5 but not both. Display the final sum in the console. 
 */
 
 function threeFives() {
@@ -59,6 +63,11 @@ function betterThreeFives(start, end) {
   return sum;
 }
 // betterThreeFives(1000, 40000000);
+
+/**
+ * Change is inevitable (especially when breaking a twenty). Make generateCoinChange(cents). 
+ * Accept a number of American cents, compute and print how to represent that amount with smallest number of coins. Common 
+ */
 
 function generateCoinChange(cents) {
   var coins = [
@@ -152,8 +161,8 @@ function fibonacci(num) {
   }
   return sum;
 }
-console.log(fibonacci(7));
-console.log(fibonacci(10));
+// console.log(fibonacci(7));
+// console.log(fibonacci(10));
 
 
 /**
@@ -176,7 +185,7 @@ function sumToOneDigit(num) {
   }
   return sumToOneDigit(sum);
 }
-console.log(sumToOneDigit(1345));
+// console.log(sumToOneDigit(1345));
 
 
 /**
@@ -246,4 +255,90 @@ console.log(sumToOneDigit(1345));
 
 
 
+  /**
+   * Create the extractDigit(num,digitNum) function that given a number and a digit number, returns the numeral value of that digit. 0 represents the ones digit,
+   *  1 represents the tens digit, etc. Given (1824,2), return 8. Given (1824,0), return 4. Given (1824,7), return 0.
+   * Second: handle negative digitNum values, where -1 represents tenths digit (0.x), -2 represents hundredths digit (0.0x), etc. Given (123.45,-1), return 4. 
+   * Third: handle negative num values as well, doing what you think is appropriate. 
+   */
+
+function extractOMatic(num, digitNum) {
+  console.log(Math.floor(Math.abs(num)/Math.pow(10, digitNum)) % 10);
+}
+// extractOMatic(-123.45,-1);
+
   
+/**
+ * If you already know who Ada Lovelace is, that’s great! In a History of Science, she is significant. 
+ * Given number of any size, return the most significant digit. If you already know what strings are, that’s great! 
+ * However, don’t use them here . Hint: use WHILE to bring the most significant digit into range where you can use the friendly modulus operator (%). 
+ * The most significant digit is the leftmost non-zero digit of a number. 
+ * Given 12345, return 1. Given 67.89, return 6. Given 0.00987, return 9. 
+Second: handle negative num values as well, doing what you think is appropriate. 
+ */
+
+function mostSignificantDigit(num) {
+  num = Math.abs(num);
+
+  if(num < 1) {
+    while(num < 10) {
+      num *= 10;
+      if(num > 1 && num < 10) {
+        return Math.trunc(num);
+      }
+    }
+  } else if(num > 10) {
+    while(num > 10) {
+      num /= 10;
+      if(num > 1 && num < 10) {
+        return Math.trunc(num);
+      }
+    }
+  }
+}
+
+// console.log(mostSignificantDigit(0.00987)); // output 9
+// console.log(mostSignificantDigit(67.89)); // output 6
+// console.log(mostSignificantDigit(12345)); // output 1
+
+
+/**
+ * Claire is Where?
+ * On New Year’s Eve, have fun but don’t forget your way home! For this challenge create four 
+ * functions (reset, moveBy, xLocation and yLocation) to track the travels of Claire, a wanderer. 
+ * Calling reset() moves Claire home to the origin (0,0). The moveBy(xOffset,yOffset) function moves her by those amounts, 
+ * in those directions. Finally, xLocation() and yLocation()return how far Claire is from home, in X and Y directions respectively. 
+ * After the calls of reset(), moveBy(1,-2), and moveBy(3,1), subsequently calling xLocation() and yLocation() should return 4 and -1. 
+ * Second: create distFromHome(). Assuming she moves diagonally, return her distance from home. 
+ */
+
+ function  clairIsWhere(num) {
+  var x = 0;
+  var y = 0;
+
+   function reset() {
+     x = 0;
+     y = 0;
+   }
+   function moveBy(xOffset, yOffset) {
+     x += xOffset;
+     y += yOffset
+   }
+   function xLocation() {
+     return x;
+   }
+   function yLocation() {
+     return y;
+   }
+   function distFromHome() {
+     return Math.sqrt(Math.pow(x,2)+Math.pow(y,2));
+   }
+   reset();
+   moveBy(1,2);
+   moveBy(3,1);
+   console.log("Claire's Coordinates: ("+ xLocation() +", "+ yLocation() +")");
+   console.log("Distance from home: "+distFromHome().toFixed([2]));
+ }
+//  clairIsWhere();
+
+
