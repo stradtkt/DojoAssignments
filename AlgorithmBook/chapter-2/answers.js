@@ -141,5 +141,109 @@ then "chick", then 2, then "chick", "boom", "chick"
  */
 
 function fibonacci(num) {
-  
+  var sum = 1;
+  var i = 0;
+  var j = 1;
+  while(num > 1) {
+    sum = i + j;
+    i = j;
+    j = sum;
+    num--;
+  }
+  return sum;
 }
+console.log(fibonacci(7));
+console.log(fibonacci(10));
+
+
+/**
+ * Sum to One Digit
+Kaitlin sees beauty in numbers, but also believes that less is more. 
+Implement sumToOne(num) 
+that sums a given integer’s digits repeatedly until the 
+sum is only one digit. Return that one-digit result. Example: sumToOne(928)
+ returns 1, because 9+2+8 = 19, then 1+9 = 10, then 1+0 = 1. 
+ */
+
+function sumToOneDigit(num) {
+  if(num < 10) {
+    return num;
+  }
+  var str = num.toString();
+  var sum = 0;
+  for(var i = 0; i < str.length; i++) {
+    sum += Number(str[i]);
+  }
+  return sumToOneDigit(sum);
+}
+console.log(sumToOneDigit(1345));
+
+
+/**
+ * IS PRIME
+ * Return whether a given integer is prime. Prime numbers are only evenly divisible 
+ * by themselves and 1. Many highly optimized solutions exist,
+ *  but for now just create one that is easy to understand and debug.
+ */
+
+ function isPrime(num) {
+  for(var i = num - 1; i > 1; i--) {
+    if(num % i == 0) {
+      return false;
+    }
+  }
+  return true;
+ }
+ function testIsPrime(numTimes) {
+   var arr = [];
+   var primeVals = [];
+   for(var x = 2; x <= numTimes; x++) {
+     arr.push(x);
+   }
+   for(var j = 0; j < arr.length; j++) {
+     if(isPrime(arr[j])) {
+       primeVals.push(arr[j]);
+     }
+   }
+   console.log(primeVals);
+   return primeVals;
+ }
+//  testIsPrime(100);
+
+
+/**
+ * Ever since you arrived at the Dojo, 
+ * you wanted one of those cool Coding Dojo sweatshirts
+ *  – maybe even more than one. Let’s say they cost $20 
+ * (including tax), but friendly Josh gives a 9% discount if you buy two, 
+ * a nice 19% discount if you buy three, or a sweet 35% discount if you 
+ * buy four or more. He only accepts cash and says he doesn’t have coins, 
+ * so you should round up to the nearest dollar. 
+ * Build function sweatshirtPricing(num) that, given a number of sweatshirts,
+ *  returns the cost.
+ */
+
+ function rockingTheDojoSweatshirt(num) {
+   var unitCost = 20;
+   var discount = [
+     [2, 0.09],
+     [3, 0.19],
+     [4, 0.35]
+   ];
+
+   for(var i = 0; i < discount.length; i++) {
+     if(num <= discount[i][0]) {
+       return num * unitCost * (1 - discount[i][1]);
+     }
+   }
+   return num * unitCost
+ }
+
+ /**
+  * Return to your previous clockHandAngles solution. Allow fractional values for input seconds, 
+  * but change your implementation to print only integer values for angles (in degrees) of the various hands. 
+  */
+
+
+
+  
