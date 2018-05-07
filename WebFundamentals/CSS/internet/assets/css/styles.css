@@ -104,6 +104,7 @@
 }
 .main-header h3 {
   display: inline-block;
+  color: #0084df;
 }
 .main-header .phone {
   vertical-align: top;
@@ -159,4 +160,8 @@
 .footer div {
   display: inline-block;
   width: 580px;
+}
+.main-info span,
+.footer span {
+  color: #0084df;
 }
