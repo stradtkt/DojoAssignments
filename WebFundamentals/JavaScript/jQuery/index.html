@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Functions</title>
+  <style>
+    .container {
+      width: 700px;
+      margin: 0 auto;
+    }
+    .container div {
+      width: 80%;
+      display: block;
+    }
+    .container div p,
+    .container div h1 {
+      display: block;
+      text-align: center
+    }
+    button {
+      display: block;
+    }
+    .red {
+      color: red;
+    }
+    .pacman {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="AddClass">
+      <h1>Add Class</h1>
+      <p>Click the button to add class 'red' to the paragraph</p>
+      <button class="addClass">AddClass</button>
+      <hr>
+    </div>
+    <div class="SlideToggle">
+      <h1>SlideToggle</h1>
+      <img src="img/pacman.gif" class="pacman" alt="">
+      <p>Click the button to slideToggle a hidden Image</p>
+      <button class="slideToggle">SlideToggle</button>
+      <hr>
+    </div>
+    <div class="SlideDown">
+      <h1>SlideDown</h1>
+      <p class="slideDownP">Click to slide down an image</p>
+      <button class="slideDown">SlideDown</button>
+      <hr>
+    </div>
+    <div class="Append">
+      <h1>Append</h1>
+      <p>Click the button to append a new paragraph</p>
+      <button class="append">Append</button>
+      <div class="newP"></div>
+      <hr>
+    </div>
+    <div class="FadeIn">
+      <h1>FadeIn</h1>
+      <p>This is fading in on click</p>
+      <button class="fadeIn">FadeIn</button>
+      <hr>
+    </div>
+    <div class="FadeOut">
+      <h1>FadeOut</h1>
+      <p>On Click this paragraph fades out</p>
+      <button class="fadeOut">FadeOut</button>
+      <hr>
+    </div>
+    <div class="After">
+      <h1>After</h1>
+      <p>The new Paragraph will be appended on after this one</p>
+      <button class="after">After</button>
+      <hr>
+    </div>
+    <div class="Before">
+      <h1>Before</h1>
+      <p>The new Paragraph will be appended on before this one</p>
+      <button class="before">Before</button>
+      <hr>
+    </div>
+  </div>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="jQueryFunctions.js"></script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+body {
+  background-color: black;
+}
+div.row div {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.brick {
+  background-color: blue;
+}
+
+.coin {
+  background: url('img/coin-spin.gif');
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: contain;
+}
+
+.pacman {
+  background: url('img/pacman2.gif');
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: cover;
+}
