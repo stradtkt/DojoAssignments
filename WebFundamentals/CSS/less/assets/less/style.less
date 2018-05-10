@@ -1,0 +1,25 @@
+@background-nav: #ccc;
+@link-color: white;
+@nav-height: 100px;
+@padding-links: 0 0 0 20px;
+@margin-links: 30px 0 0 0;
+@font-size: 30px;
+.nav {
+  background: @background-nav;
+  height: @nav-height;
+}
+.nav li a {
+  color: @link-color;
+  font-size: @font-size;
+  text-decoration: none;
+  &:hover {
+    color: red;
+    transition: 0.4s ease-in-out;
+  }
+
+}
+.nav li {
+  padding: @padding-links;
+  margin: @margin-links;
+  display: inline-block;
+}
