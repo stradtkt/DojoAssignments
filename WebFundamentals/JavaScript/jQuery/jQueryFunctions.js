@@ -1,33 +1,58 @@
 $(document).ready(function() {
   $('.addClass').click(function() {
-    $('.AddClass p').addClass('red');
+    $('.row .AddClass').addClass('red');
   });
 
   $('button.slideToggle').click(function() {
-    $('.SlideToggle .pacman').slideToggle("slow");
+    $('.row .pacman').slideToggle("slow");
   });
-  $('.slideDownP').hide();
+  $('.SlideDown').hide();
   $('button.slideDown').click(function() {
-    $('.SlideDown .slideDownP').slideDown('slow');
-  })
-  $('button.append').click(function() {
-    $('.Append .newP').append('<p>This is a new Paragraph</p>');
+    $('.row .SlideDown').slideDown('slow');
+  });
+  $('button.slideUp').click(function() {
+    $('.row .SlideUp').slideUp('slow');
   });
 
-  $('.FadeIn p').hide();
+  $('button.append').click(function() {
+    $('.row .Append').append('<p>This is a new Paragraph</p>');
+  });
+
+  $('.FadeIn').hide();
   $('button.fadeIn').click(function() {
-    $('.FadeIn p').fadeIn(1000);
+    $('.row .FadeIn').fadeIn(1000);
   });
 
   $('button.fadeOut').click(function() {
-    $('.FadeOut p').fadeOut(1000);
+    $('.row .FadeOut').fadeOut(1000);
   });
 
   $('button.after').click(function() {
-    $('.After p').after('<p>This is the after content</p>');
+    $('.row .After').after('<p>This is the after content</p>');
   });
 
   $('button.before').click(function() {
-    $('.Before p').before('<p>This is the before content</p>');
+    $('.row .Before').before('<p>This is the before content</p>');
   });
+
+
+  function form() {
+    var name = $('#name').val(),
+         age = $('#age').val(),
+         email = $('#email').val();
+
+         $('form').submit(function(e) {
+           e.preventDefault();
+           if(name) {
+             $('.content').html(name);
+           }
+           if(age) {
+             $('.content').html(age);
+           }
+           if(email) {
+             $('.content').html(email);
+           }
+         })
+  }
+  form();
 });

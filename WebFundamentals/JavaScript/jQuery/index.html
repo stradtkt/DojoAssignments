@@ -29,60 +29,97 @@
       width: 100px;
       height: 100px;
     }
+    .SlideUp {
+      width: 150px;
+      height: 150px;
+      background-color: blue;
+    }
+    .SlideDown {
+      width: 150px;
+      height: 150px;
+      background-color: blue;
+    }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <div class="AddClass">
+    <div class="row">
       <h1>Add Class</h1>
-      <p>Click the button to add class 'red' to the paragraph</p>
+      <p class="AddClass">Click the button to add class 'red' to the paragraph</p>
       <button class="addClass">AddClass</button>
       <hr>
     </div>
-    <div class="SlideToggle">
+    <div class="row">
       <h1>SlideToggle</h1>
       <img src="img/pacman.gif" class="pacman" alt="">
-      <p>Click the button to slideToggle a hidden Image</p>
+      <p class="SlideToggle">Click the button to slideToggle a hidden Image</p>
       <button class="slideToggle">SlideToggle</button>
       <hr>
     </div>
-    <div class="SlideDown">
+    <div class="row">
       <h1>SlideDown</h1>
-      <p class="slideDownP">Click to slide down an image</p>
+      <div class="SlideDown"></div>
       <button class="slideDown">SlideDown</button>
       <hr>
     </div>
-    <div class="Append">
+    <div class="row">
+      <h1>SlideUp</h1>
+      <div class="SlideUp"></div>
+      <button class="slideUp">SlideUp</button>
+      <hr>
+    </div>
+    <div class="row">
       <h1>Append</h1>
-      <p>Click the button to append a new paragraph</p>
+      <p class="Append">Click the button to append a new paragraph</p>
       <button class="append">Append</button>
       <div class="newP"></div>
       <hr>
     </div>
-    <div class="FadeIn">
+    <div class="row">
       <h1>FadeIn</h1>
-      <p>This is fading in on click</p>
+      <p class="FadeIn">This is fading in on click</p>
       <button class="fadeIn">FadeIn</button>
       <hr>
     </div>
-    <div class="FadeOut">
+    <div class="row">
       <h1>FadeOut</h1>
-      <p>On Click this paragraph fades out</p>
+      <p class="FadeOut">On Click this paragraph fades out</p>
       <button class="fadeOut">FadeOut</button>
       <hr>
     </div>
-    <div class="After">
+    <div class="row">
       <h1>After</h1>
-      <p>The new Paragraph will be appended on after this one</p>
+      <p class="After">The new Paragraph will be appended on after this one</p>
       <button class="after">After</button>
       <hr>
     </div>
-    <div class="Before">
+    <div class="row">
       <h1>Before</h1>
-      <p>The new Paragraph will be appended on before this one</p>
+      <p class="Before">The new Paragraph will be appended on before this one</p>
       <button class="before">Before</button>
       <hr>
+    </div>
+    <div class="row">
+      <form>
+        <div>
+          <label>
+            Name: <input type="text" name="name" id="name" placeholder="Name:">
+          </label>
+        </div>
+        <div>
+          <label>
+            Age: <input type="number" name="age" id="age" placeholder="Age:">
+          </label>
+        </div>
+        <div>
+          <label>
+            Email: <input type="email" name="email" id="email" placeholder="Email:">
+          </label>
+        </div>
+        <input type="submit" value="Submit">
+      </form>
+      <div class="content"></div>
     </div>
   </div>
 

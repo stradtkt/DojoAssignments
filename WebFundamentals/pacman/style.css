@@ -22,4 +22,11 @@ div.row div {
   background-repeat: no-repeat;
   background-position: cover;
   background-size: cover;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+
+.empty {
+  background: black;
 }
