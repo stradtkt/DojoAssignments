@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  margin: 0;
 }
 div.row div {
   width: 20px;
@@ -17,7 +18,7 @@ div.row div {
   background-size: contain;
 }
 
-.pacman {
+#pacman {
   background: url('img/pacman2.gif');
   background-repeat: no-repeat;
   background-position: cover;
@@ -29,4 +30,12 @@ div.row div {
 
 .empty {
   background: black;
+}
+#score {
+  border: 1px solid white;
+  height: 30px;
+  width: 30px;
+  color: white;
+  padding: 7px;
+  text-align: center;
 }
