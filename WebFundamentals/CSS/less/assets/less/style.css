@@ -1,18 +1,51 @@
-.nav {
-  background: #ccc;
-  height: 100px;
+header {
+  text-align: center;
 }
-.nav li a {
-  color: white;
-  font-size: 30px;
+header h1 {
+  font-family: Tahoma;
+}
+header p {
+  font-family: Arial;
+  font-weight: 700;
+  font-style: italic;
+}
+.wrapper {
+  background-color: #f9f9f9;
+  width: 980px;
+  height: auto;
+  margin: 0 auto;
+}
+.side-nav {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 30%;
+}
+.side-nav ul {
+  list-style-type: none;
+}
+.side-nav li h3 {
+  font-family: tahoma;
+  font-weight: 700;
+}
+.side-nav li a {
   text-decoration: none;
+  color: dodgerblue;
+  font-family: tahoma;
 }
-.nav li a:hover {
-  color: red;
+.side-nav li a:hover {
+  color: green;
   transition: 0.4s ease-in-out;
 }
-.nav li {
-  padding: 0 0 0 20px;
-  margin: 30px 0 0 0;
+.main-content {
   display: inline-block;
+  width: 50%;
+}
+.main-content h1 {
+  text-align: center;
+  font-family: arial;
+}
+.main-content p {
+  text-align: center;
+  font-family: tahoma;
 }
