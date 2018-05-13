@@ -39,6 +39,11 @@
       height: 150px;
       background-color: blue;
     }
+    .blue {
+      font-weight: 900;
+      color: dodgerblue;
+      font-style: italic;
+    }
   </style>
 </head>
 <body>
@@ -104,25 +109,51 @@
       <form>
         <div>
           <label>
-            Name: <input type="text" name="name" id="name" placeholder="Name:">
+            Name: <input type="text" name="name" id="name" placeholder="Name">
           </label>
-        </div>
-        <div>
           <label>
-            Age: <input type="number" name="age" id="age" placeholder="Age:">
+            Subject <input type="text" name="subject" id="subject" placeholder="Subject">
           </label>
-        </div>
-        <div>
           <label>
-            Email: <input type="email" name="email" id="email" placeholder="Email:">
+            Message <textarea name="msg" id="msg" placeholder="Message" cols="10" rows="5"></textarea>
           </label>
         </div>
         <input type="submit" value="Submit">
       </form>
       <div class="content"></div>
+      <div class="content2"></div>
+    </div>
+    <hr>
+
+    <div class="div"></div>
+    <button class="weather">Get "weather"</button>
+    <button class="weather">Set "weather" to "sunny"</button>
+    <button class="weather">Set "weather" to "rainy"</button>
+    <button class="weather">Remove "weather"</button>
+    <p>The "weather" value is <span>?</span></p>
+
+<hr>
+    <div class="attr">
+      <h1>.attr()</h1>
+      <p title="Credit Repair">
+        Help Improve Your Credit With Subscribing Now!
+      </p>
+    </div>
+    <hr>
+
+    <div class="toggle">
+      <h1>.toggle()</h1>
+      <p>Adding a color class to the paragraph</p>
+      <button class="toggleP">Toggle P</button>
+    </div>
+    <hr>
+
+    <div class="show">
+      <h1>.show()</h1>
+      <p>Originally hidden p that is shown on click</p>
+      <button class="showP">Show</button>
     </div>
   </div>
-
 
     <script
     src="https://code.jquery.com/jquery-3.3.1.min.js"
