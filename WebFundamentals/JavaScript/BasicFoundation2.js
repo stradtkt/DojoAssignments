@@ -135,6 +135,8 @@ function reverseArray2(arr) {
 // console.log(reverseArray2([1,2,3,4]));
 
 
+
+
 function outlookNegative(arr) {
   var newArr = [];
   for(var i = 0; i < arr.length; i++) {
