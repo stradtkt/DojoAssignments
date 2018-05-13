@@ -39,6 +39,14 @@ function doubleVision(arr) {
 }
 // console.log(doubleVision([1,2,3]));
 
+function doubleVision2(arr) {
+  var newArr = arr.map(function(x) {return x+x;});
+  return newArr;
+}
+// console.log(doubleVision2([1,2,3,4]));
+
+
+
 function countPositives(arr) {
   var count = 0;
   for(var i = 0; i < arr.length; i++) {
@@ -103,6 +111,13 @@ function addSevenToMost(arr) {
 }
 // console.log(addSevenToMost([1,2,3,4,5,6,7]));
 
+function addSevenToMost2(arr) {
+  var newArr = arr.map(function(x) {return x+7});
+  return newArr;
+}
+// console.log(addSevenToMost2([1,2,3,4,5,6,7]));
+
+
 
 function reverseArray(arr) {
   for(var i = 0; i < arr.length/2; i++) {
@@ -113,6 +128,11 @@ function reverseArray(arr) {
   return arr;
 }
 // console.log(reverseArray([1,2,3,4,5,6]));
+
+function reverseArray2(arr) {
+  return arr.reverse();
+}
+// console.log(reverseArray2([1,2,3,4]));
 
 
 function outlookNegative(arr) {
