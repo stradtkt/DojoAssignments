@@ -1,9 +1,12 @@
 .content {
   width: 80%;
-  height: 70%;
+  height: 500px;
   border-bottom: 30px solid red;
   border-left: 15px solid red;
   border-top: 15px solid red;
   border-right: 15px solid red;
   margin-top: 80px;
+}
+ul {
+  list-style-type: none;
 }
