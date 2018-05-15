@@ -5,13 +5,15 @@
 
  function sigma(num) {
    var sum = 0;
+   // you want it less than or eqaul to the num because if you do less than it will be one short
    for(var i = 0; i <= num; i++) {
+     // add the increment every time on the sum
      sum += i;
    }
    return sum;
  }
 //  console.log(sigma(5)); // output = 15
-
+// if 5 is entered then it is counting 1+2+3+4+5 which would come out to 15
 /**
  Just the Facts, ma’am. Factorials, that is. Write a function factorial(num) that, given a number, 
  returns the product (multiplication) of all positive integers from 1 up to number (inclusive). 
@@ -20,6 +22,7 @@
 
 function factorial(num) {
   var mult = num;
+  // when looping through the number it will count 6*5*4*3*2*1
   for(var i = num - 1; i > 0; i--) {
     mult *= i;
   }
@@ -36,9 +39,10 @@ divisible by 3 or 5 but not both. Display the final sum in the console.
 function threeFives() {
   var sum = 0;
   for(var i = 100; i < 400000; i++) {
-    if(i % 3 == 0 && i % 5 == 0) {
+    //our you could just make the case i % 15 == 0 which would pass also
+    if(i % 3 === 0 && i % 5 === 0) {
       continue;
-    } else if(i % 3 == 0 || i % 5 == 0) {
+    } else if(i % 3 === 0 || i % 5 === 0) {
       sum += i;
     }
   }

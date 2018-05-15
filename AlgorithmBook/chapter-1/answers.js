@@ -619,8 +619,10 @@
       
       
       function reverseArray(array) {
-        var newArray = new Array;
+        var newArray = [];
+        // start from the last item in the array and then count down with a for loop
         for(var i = array.length-1; i >= 0; i--) {
+          // push the items onto the new array
             newArray.push(array[i]);
         }
         console.log(newArray);
@@ -640,6 +642,7 @@
         var newArray = [];
         for(var i = 0; i < array.length; i++) {
           if(array[i] > 0) {
+            // to change the item into a negative just subtract two times the number to get the negative value
             newArray.push(array[i] - array[i]*2);
           } else {
             newArray.push(array[i]);
@@ -682,10 +685,14 @@
       */
       function swapTowardCenter(arr) {
         var left = 0;
+        // arr.length-1 is the last item in the array
         var right = arr.length - 1; //seeing how right right one is the last one 
         while(left < right) {
+          //temp is holding the arr[left] portion to be used somewhere else
           var temp = arr[left];
+          // arr[left] is then set to arr[right]
           arr[left] = arr[right];
+          // arr[right] gets the value of arr[left] so it is flipped around
           arr[right] = temp;
       
           left+=2;
