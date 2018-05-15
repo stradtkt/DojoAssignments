@@ -1,18 +1,18 @@
 var score = 0;
 var world = [
   [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-  [1,0,3,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-  [1,3,1,1,3,2,2,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,1],
-  [1,3,2,2,3,1,1,1,0,0,0,0,0,1,1,2,2,1,0,0,0,0,1],
-  [1,3,1,1,3,2,2,1,0,0,0,0,0,1,1,2,2,1,0,0,0,0,1],
-  [1,3,2,2,3,1,1,1,0,0,0,0,0,1,1,2,1,1,0,0,0,0,1],
-  [1,3,1,1,3,2,2,1,0,0,0,0,0,2,2,2,1,1,0,0,0,0,1],
-  [1,3,2,2,3,1,1,1,0,0,0,0,0,1,1,2,1,1,0,0,0,0,1],
-  [1,3,1,1,3,2,2,1,0,0,0,0,0,1,1,2,1,1,0,0,0,0,1],
-  [1,3,2,2,3,1,1,1,0,0,0,0,0,1,1,2,2,1,0,0,0,0,1],
-  [1,3,1,1,3,2,2,1,0,0,0,0,0,1,1,2,2,1,0,0,0,0,1],
-  [1,3,2,2,3,1,1,1,0,0,0,0,0,1,1,1,1,1,0,0,0,0,1],
-  [1,3,1,1,3,2,2,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+  [1,0,3,3,3,3,3,3,0,4,0,0,0,0,0,0,0,0,0,0,0,0,1],
+  [1,3,1,1,3,2,2,1,0,4,0,0,0,1,1,1,1,1,0,0,0,0,1],
+  [1,3,2,2,3,1,1,1,0,4,0,0,0,1,1,2,2,1,0,0,0,0,1],
+  [1,3,1,1,3,2,2,1,0,4,0,0,0,1,1,2,2,1,0,0,0,0,1],
+  [1,3,2,2,3,1,1,1,0,4,0,0,0,1,1,2,1,1,0,0,0,0,1],
+  [1,3,1,1,3,2,2,1,0,4,0,0,0,2,2,2,1,1,0,0,0,0,1],
+  [1,3,2,2,3,1,1,1,0,4,0,0,0,1,1,2,1,1,0,0,0,0,1],
+  [1,3,1,1,3,2,2,1,0,4,0,0,0,1,1,2,1,1,0,0,0,0,1],
+  [1,3,2,2,3,1,1,1,0,4,0,0,0,1,1,2,2,1,0,0,0,0,1],
+  [1,3,1,1,3,2,2,1,0,4,0,0,0,1,1,2,2,1,0,0,0,0,1],
+  [1,3,2,2,3,1,1,1,0,4,0,0,0,1,1,1,1,1,0,0,0,0,1],
+  [1,3,1,1,3,2,2,1,0,4,0,0,0,0,0,0,0,0,0,0,0,0,1],
   [1,3,3,3,3,3,3,3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
   [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
 ];
@@ -20,7 +20,8 @@ var worldDict = {
   0: 'blank',
   1: 'wall', 
   2: 'sushi',
-  3: 'onigiri'
+  3: 'onigiri',
+  4: 'cherry'
 };
 
 function drawWorld() {
@@ -44,42 +45,50 @@ function drawNinjaman() {
 document.getElementById("ninjaman").style.top = ninjaman.y *40+"px";
 document.getElementById("ninjaman").style.left = ninjaman.x *40+"px";
 document.getElementById("score").innerHTML = score.toString();
-
 }
 drawNinjaman();
 
 document.onkeydown = function(e) {
 if(e.keyCode == 37) {
+  document.getElementById('ninjaman').style.transform = "rotate(180deg)";
   if(world[ninjaman.y][ninjaman.x - 1] != 1) {
     ninjaman.x--;
     if(world[ninjaman.y][ninjaman.x] == 2) {
       score += 10;
     } else if(world[ninjaman.y][ninjaman.x] == 3) {
       score += 5;
+    } else if(world[ninjaman.y][ninjaman.x] == 4) {
+      score += 50;
     } else {
       console.log('There is nothing here');
     }
   }
  }
  if(e.keyCode == 39) {
+  document.getElementById('ninjaman').style.transform = "rotate(360deg)";
    if(world[ninjaman.y][ninjaman.x + 1] != 1) {
     ninjaman.x++;
     if(world[ninjaman.y][ninjaman.x] == 2) {
       score += 10;
     } else if(world[ninjaman.y][ninjaman.x] == 3) {
       score += 5;
+    } else if(world[ninjaman.y][ninjaman.x] == 4) {
+      score += 50;
     } else {
       console.log('There is nothing here');
     }
    }
  }
  if(e.keyCode == 40) {
+  document.getElementById('ninjaman').style.transform = "rotate(90deg)";
    if(world[ninjaman.y + 1][ninjaman.x] != 1) {
     ninjaman.y++;
     if(world[ninjaman.y][ninjaman.x] == 2) {
       score += 10;
     } else if(world[ninjaman.y][ninjaman.x] == 3) {
       score += 5;
+    } else if(world[ninjaman.y][ninjaman.x] == 4) {
+      score += 50;
     } else {
       console.log('There is nothing here');
     }
@@ -92,6 +101,8 @@ if(e.keyCode == 37) {
       score += 10;
     } else if(world[ninjaman.y][ninjaman.x] == 3) {
       score += 5;
+    } else if(world[ninjaman.y][ninjaman.x] == 4) {
+      score += 50;
     } else {
       console.log('There is nothing here');
     }
