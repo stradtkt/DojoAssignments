@@ -243,3 +243,151 @@ function filterRange(arr, min, max) {
 // console.log(filterRange([1,2,3,4,5,6,7,8,9,1,2,3,4,5,6,7,6], 3,4));
 // output [3,4,3,4]
 
+
+/**
+ * Array: Concat
+ * Replicate JavaScript’s concat(). Create a standalone function that accepts two arrays. 
+ * Return a new array containing the first array’s elements, followed by the second array’s elements.
+ * Do not alter the original arrays. Ex.: arrConcat( ['a','b'], [1,2] ) 
+ * should return new array ['a','b',1,2].
+ */
+
+function arrayConcat(arr1, arr2) {
+  for(var i = 0; i < arr2.length; i++) {
+    arr1.push(arr2[i]);
+  }
+  return arr1;
+}
+// console.log(arrayConcat([1,2,3],['a', 'b', 'c']));
+//output [1,2,3,'a','b','c']
+
+/**
+ * Skyline Heights
+ * Lovely Burbank has a breathtaking view of the Los Angeles skyline.
+ * Let’s say you are given an array with heights of consecutive buildings,
+ * starting closest to you and extending away. Array [-1,7,3] would represent three buildings: 
+ * first is actually out of view below street level, behind it is second at 7 stories high, 
+ * third is 3 stories high (hidden behind the 7-story). You are situated at street level.
+ * Return array containing heights of buildings you can see, in order. 
+ * Given [-1,1,1,7,3] return [1,7]. Given [0,4] return [4]. As always with challenges, 
+ * do not use built-in array functions such as unshift(). 
+ */
+
+function skylineHeights(arr) {
+  var max = arr[0];
+  var newArr = [];
+  for(var i = 1; i < arr.length; i++) {
+    if(arr[i] > 0) {
+      if(arr[i] > max) {
+        newArr.push(arr[i]);
+        max = arr[i];
+      }
+    }
+  }
+  return newArr;
+}
+// console.log(skylineHeights([-1,1,1,7,3]));
+// output [1,7]
+// console.log(skylineHeights([-1,2,4,4,7]));
+//output [2,4,7]
+
+
+/**
+ * Implement removeNegatives() that accepts an array, removes negative values, 
+ * and returns the same array (not a copy), preserving non-negatives’ order. 
+ * As always, do not use built-in array functions. 
+ * Second: don’t use nested loops. 
+ */
+
+function removeNegatives(arr) {
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] < 0) {
+      for(var j = i; j < arr.length; j++) {
+        arr[j] = arr[j+1];
+      }
+      arr.length--;
+      i--;
+    }
+  }
+  return arr;
+}
+// console.log(removeNegatives([1,2,3,-1,-1,-3,4,5,6,-4,-5,-6]));
+// output [1,2,3,4,5,6]
+function removeNegatives2(arr) {
+  var newArr = [];
+  for(var i = 0; i < arr.length; i++) {
+    if(arr[i] >= 0) {
+      newArr.push(arr[i]);
+    }
+  }
+  arr = newArr;
+  return arr;
+}
+// console.log(removeNegatives2([1,-1,3,-3,5,-5]));
+// output [1,3,5]
+/**
+ * Array: Second-to-Last
+ * Return the second-to-last element of an array. Given [42,true,4,"Kate",7], 
+ * return "Kate". If array is too short, return null. 
+ */
+
+function secondToLast(arr) {
+  if(arr.length < 2) {
+    return null;
+  }
+  return arr[arr.length-2];
+}
+// console.log(secondToLast([42,true,4,"Kate",7]));
+// output Kate
+
+/**
+ * Array: Nth-to-Last
+ * Return the element that is N-from-array’s-end. Given ([5,2,3,6,4,9,7],3) , 
+ * return 4 . If the array is too short, return null .
+ */
+
+ function nthToLast(arr, num) {
+   if(arr.length < 4) {
+     return null;
+   }
+   return arr[arr.length-num];
+ }
+//  console.log(nthToLast([3,4,5,6,7,8,9],3));
+ // output  7
+
+
+ /**
+  * Array: Second-Largest
+  * Return the second-largest element of an array. 
+  * Given [42,1,4,Math.PI,7] , return 7 . If the array is too short, return null .
+  */
+
+  function secondLargest(arr) {
+    var max = arr[0], sec = arr[0];
+    for(var i = 0; i < arr.length; i++) {
+      if(arr[i] > max) {
+        max = arr[i];
+      }
+    }
+    for(var i = 0; i < arr.length; i++) {
+      if((arr[i] < max) && arr[i] != max) {
+        second = arr[i];
+        break;
+      }
+    }
+    for(var i = 0; i < arr.length; i++) {
+      if(arr[i] > second && arr[i] != max) {
+        second = arr[i];
+      }
+    }
+    return second;
+  }
+  // console.log(secondLargest([1,22,33,4,44,66,33,55,566,55]));
+  // output 66
+
+  /**
+   * Array: Nth-Largest
+   * Liam has "N" number of Green Belt stickers for excellent Python projects. 
+   * Given arr and N , return the N th-largest element, where (N-1) elements 
+   * are larger. Return null if needed.
+   */
